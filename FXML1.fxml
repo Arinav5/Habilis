@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="487.0" prefWidth="441.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javaapplication8.FXML1Controller">
+   <children>
+      <AnchorPane fx:id="menuPanel" layoutX="-3.0" prefHeight="487.0" prefWidth="77.0" style="-fx-background-color: #2f2f30; -fx-border-color: #2f2f30; -fx-border-width: 2;">
+         <children>
+            <ImageView fx:id="sun" fitHeight="49.0" fitWidth="54.0" layoutX="12.0" layoutY="20.0" onMouseClicked="#goToDay" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:/C:/Arina's%20Folder/Programming/Learning/Coding/Exercise2/src/JavaApplication8/Images/sun.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="clock" fitHeight="49.0" fitWidth="48.0" layoutX="15.0" layoutY="88.0" onMouseClicked="#goToRemoved" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:/C:/Arina's%20Folder/Programming/Learning/Coding/Exercise2/src/JavaApplication8/Images/clock.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <AnchorPane fx:id="clockPanel" layoutX="74.0" prefHeight="487.0" prefWidth="367.0" style="-fx-background-color: #242121; -fx-border-color: black; -fx-border-width: 0 0 0 1;">
+         <children>
+            <ScrollPane hbarPolicy="NEVER" layoutX="20.0" layoutY="44.0" prefHeight="425.0" prefWidth="330.0" style="-fx-background-color: transparent;" vbarPolicy="NEVER">
+               <content>
+                  <VBox fx:id="removedTasksVBox" prefHeight="426.0" prefWidth="330.0" style="-fx-background-color: #242121;">
+                     <padding>
+                        <Insets left="2.0" top="45.0" />
+                     </padding>
+                     <children>
+                        <ImageView fx:id="checkMark" fitHeight="85.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true">
+                           <VBox.margin>
+                              <Insets left="105.0" top="100.0" />
+                           </VBox.margin>
+                           <image>
+                              <Image url="file:/C:/Arina's%20Folder/Programming/Learning/Coding/Exercise2/src/JavaApplication8/Images/sharp_done_outline_white_48dp.png" />
+                           </image>
+                        </ImageView>
+                     </children></VBox>
+               </content>
+            </ScrollPane>
+            <AnchorPane layoutY="1.0" prefHeight="87.0" prefWidth="347.0" style="-fx-background-color: rgba(36, 33, 33, 0.9); -fx-border-color: black; -fx-border-width: 0 0 0 1;">
+               <children>
+                  <Label layoutX="101.0" layoutY="19.0" text="Removed" textFill="#ebebe8">
+                     <font>
+                        <Font name="System Bold" size="33.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="sunPanel" layoutX="74.0" prefHeight="487.0" prefWidth="367.0" style="-fx-background-color: #242121; -fx-border-color: black; -fx-border-width: 0 0 0 1;">
+         <children>
+            <TextField fx:id="taskAdder" layoutX="22.0" layoutY="397.0" onKeyPressed="#makeTask" prefHeight="49.0" prefWidth="316.0" promptText="Add Task" style="-fx-background-color: #2f2f30; -fx-text-fill: white; dius: 32;">
+               <padding>
+                  <Insets left="43.0" />
+               </padding>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="28.0" layoutY="407.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:/C:/Arina's%20Folder/Programming/Learning/Coding/Exercise2/src/JavaApplication8/Images/newTask.png" />
+               </image>
+            </ImageView>
+            <ScrollPane fx:id="scrollPane1" hbarPolicy="NEVER" layoutX="22.0" layoutY="12.0" prefHeight="375.0" prefWidth="316.0" style="-fx-background-color: transparent;" vbarPolicy="NEVER">
+               <content>
+                  <VBox fx:id="taskItems" prefHeight="374.0" prefWidth="320.0" style="-fx-background-color: #242121;">
+                     <padding>
+                        <Insets top="73.0" />
+                     </padding>
+                     <children>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fx:id="addTaskImg" fitHeight="102.0" fitWidth="98.0" layoutX="97.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="file:/C:/Arina's%20Folder/Programming/Learning/Coding/Exercise2/src/JavaApplication8/Images/outline_note_add_white_48dp.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+            <AnchorPane prefHeight="87.0" prefWidth="347.0" style="-fx-background-color: rgba(36, 33, 33, 0.9); -fx-border-color: black; -fx-border-width: 0 0 0 1;">
+               <children>
+                  <Label layoutX="103.0" layoutY="19.0" text="My Day" textFill="#fffe7d">
+                     <font>
+                        <Font name="System Bold" size="33.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <JFXCheckBox fx:id="isNewDay" checkedColor="#242121" layoutX="281.0" layoutY="464.0" onAction="#askDayInvisible" prefHeight="18.0" prefWidth="61.0" text="New Day?" textFill="#6f6d6d" unCheckedColor="#6f6d6d" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
